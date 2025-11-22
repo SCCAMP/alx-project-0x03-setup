@@ -1,10 +1,5 @@
 
-interface ButtonProps {
-  buttonLabel: string
-  buttonSize?: string
-  buttonBackgroundColor?: 'red' | 'blue' | 'orange' | 'green'
-  action?: () => void
-}
+import { ButtonProps } from '@/interface';
 
 
 const Button = ({ buttonLabel, buttonSize, buttonBackgroundColor, action }: ButtonProps) => {
@@ -14,7 +9,8 @@ const Button = ({ buttonLabel, buttonSize, buttonBackgroundColor, action }: Butt
     blue: 'bg-blue-500',
     orange: 'bg-orange-500',
     green: 'bg-green-500',
-  }[buttonBackgroundColor] : 'bg-slate-500'
+  }
+  [buttonBackgroundColor] : 'bg-slate-500'
 
 
   return (
